@@ -16,4 +16,5 @@ grep -v "Bank" | \
 
 # Adds an empty line after every 4 lines 
 # (NR % 4 == 0 {print ""} = Number of records is 4 divided by 4 is 0
+
 awk '1; NR % 4 == 0 {print ""}'
