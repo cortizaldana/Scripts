@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo -e "\e[32m\tMemory Information\e[0m\n"
+
 # Prints Memory Information
 sudo dmidecode -t 17 | \
 
