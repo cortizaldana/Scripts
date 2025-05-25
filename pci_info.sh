@@ -2,10 +2,10 @@
  
 echo -e "\e[32m\t\tPCI Slot Information\e[0m\n"
 
-sudo dmidecode -t slot | \
+dmidecode -t slot | \
 
-awk '/Designation/,/Bus Address/' | \
+awk '/Designation:/,/Bus Address:/' | \
 
-grep -vE "Type:|Characteristics:" | \
+grep -vE "Characteristics:|ID:|Length:|3.3|SMB|PME|5.0 V" | \
 
-awk '1; NR % 4 == 0 {print ""}'
+awk '1; NR % 5 == 0 {print ""}'
