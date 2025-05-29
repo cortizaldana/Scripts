@@ -13,4 +13,5 @@ ipmi)
 $HOME/sum -i "$IPADDR" -u "$IPMI_USER" -p "$IPMI_PASS" -c UpdateBMC --file "$FILE" ;;
 
 *)
-echo "./smicro_net_update.sh bios|ipmi <IP> file"
+echo "./smicro_net_update.sh bios|ipmi <IP> file" ;;
+esac
