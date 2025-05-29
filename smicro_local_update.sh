@@ -13,5 +13,5 @@ ipmi)
 "$SCRIPT_DIR/sum" -c UpdateBMC --file "$SCRIPT_DIR/$FILE" ;; 
 
 *)
-echo "./smicro_local_update.sh bios|ipmi file"
+echo "./smicro_local_update.sh bios|ipmi file" ;;
 esac
