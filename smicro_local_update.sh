@@ -2,15 +2,16 @@
 
 TOOL="$1"
 FILE="$2"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 case $TOOL in
 
 bios)
-$HOME/sum -c UpdateBIOS --file "$FILE" ;;
+"$SCRIPT_DIR/sum" -c UpdateBIOS --file "$SCRIPT_DIR/$FILE" ;;
 
 ipmi)
-$HOME/sum -c UpdateBMC --file "$FILE" ;; 
+"$SCRIPT_DIR/sum" -c UpdateBMC --file "$SCRIPT_DIR/$FILE" ;; 
 
 *)
-echo "./smicro_update.sh bios|ipmi file"
+echo "./smicro_local_update.sh bios|ipmi file"
 esac
