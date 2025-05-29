@@ -1,6 +1,5 @@
 #!/bin/bash 
-USER=" "
-PASS=" "
+
 TOOL="$1"
 FILE="$2"
 
